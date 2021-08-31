@@ -3,7 +3,7 @@
   <h3>{{nome}}</h3>
   <h4>{{email}}</h4>
   <ul>
-      <li *ngFor="let telefone of tels"><a href="tel:9999999999">{{telefone}}</a></li>
+      <li *ngFor="let telefone of tels"><a href="tel:{{telefone}}">{{telefone}}</a></li>
   </ul>
   <a href="#">Editar</a>
 </section>

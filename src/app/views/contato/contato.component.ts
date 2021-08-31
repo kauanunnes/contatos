@@ -7,10 +7,10 @@ import { Contato } from 'src/app/models/Contato';
   styleUrls: ['./contato.component.css'],
 })
 export class ContatoComponent implements OnInit {
-  @Input() contato?: Contato
-  nome?: string
-  email?: string
-  tels?: string[]
+  @Input() contato!: Contato
+  nome!: string
+  email!: string
+  tels!: string[]
   constructor() {}
 
   ngOnInit(): void {

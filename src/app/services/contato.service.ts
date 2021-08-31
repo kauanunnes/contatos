@@ -42,4 +42,8 @@ export class ContatoService {
   getContatos():Contato[] {
     return this.contatos;
   }
+
+  addContato(contato: Contato):void {
+    this.contatos.push(contato)
+  }
 }

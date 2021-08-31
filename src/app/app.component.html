@@ -1,2 +1,4 @@
-<app-menu></app-menu>
+<app-menu (eventEmitter)="mostrandoModal($event)" [modalSituation]="mostrandoCreateContato"></app-menu>
 <app-lista-de-contatos></app-lista-de-contatos>
+<app-create-contato *ngIf="mostrandoCreateContato" (handleDisapearModal)="escondendoModal($event)"></app-create-contato>
+
