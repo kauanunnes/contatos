@@ -1,31 +1,24 @@
 <div id="modal">
-  <form>
+  <form autocomplete="off">
       <label>
           Nome:
-          <input type="text" name="nome" id="nome">
+          <input type="text" name="nome" id="nome" [(ngModel)]="novoContato.nome">
       </label>
       <label>
           E-mail:
-          <input type="email" name="email" id="email">
+          <input type="email" [(ngModel)]="novoContato.email" name="email" id="email">
       </label>
       <label>
           Telefone:
-          <div>
-              <input type="email" name="email" id="email">
-              <a><i class="material-icons">add_circle</i></a>
-          </div>
-          <div>
-              <input type="email" name="email" id="email">
-              <a class="remove"><i class="material-icons">remove_circle</i></a>
-          </div>
-          <div>
-              <input type="email" name="email" id="email">
-              <a class="remove"><i class="material-icons">remove_circle</i></a>
+          <div *ngFor="let telefone of novoContato.tels; let i = index; trackBy: track">
+              <input type="tel" name="tel{{i}}" [(ngModel)]="novoContato.tels[i]">
+              <a (click)="addTel()" *ngIf="i === 0"><i class="material-icons">add_circle</i></a>
+              <a (click)="removeTel(i)" class="remove" *ngIf="i !== 0"><i class="material-icons">remove_circle</i></a>
           </div>
       </label>
       <div class="controles">
           <button type="button" class="link" (click)="escondendoModal()">Cancelar</button>
-          <button type="button">Adicionar</button>
+          <button type="button" (click)="handleAddContato(novoContato)">Adicionar</button>
       </div>
   </form>
 </div>

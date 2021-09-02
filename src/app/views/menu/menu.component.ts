@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +6,6 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  @Input() modalSituation!:boolean;
   @Output() eventEmitter = new EventEmitter()
   constructor() { }
 
@@ -14,7 +13,7 @@ export class MenuComponent implements OnInit {
   }
 
   mostrarModalClick():void {
-    this.eventEmitter.emit(this.modalSituation)
+    this.eventEmitter.emit()
   }
 
 }
