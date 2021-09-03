@@ -1,5 +1,7 @@
 nav {
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: #2c5288ab;
+
   display: flex;
   justify-content: center;
   position: fixed;
@@ -28,7 +30,7 @@ nav > ul > li {
 nav > ul > li > a {
   display: inline-block;
   text-decoration: none;
-  color: #ccc;
+  color: rgb(255, 255, 255);
   padding: 20px;
   font-size: 1.2;
   cursor: pointer;

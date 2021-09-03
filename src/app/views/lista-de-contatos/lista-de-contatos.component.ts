@@ -9,7 +9,7 @@ import { ContatoService } from 'src/app/services/contato.service';
 })
 export class ListaDeContatosComponent implements OnInit {
   private cs:ContatoService = new ContatoService()
-  @Input() contatos!:Contato[];
+  contatos:Contato[] = this.cs.getContatos()
   constructor() {
   }
 

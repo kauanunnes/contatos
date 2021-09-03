@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges } from '@angular/core';
 import { Contato } from './models/Contato';
 import { ContatoService } from './services/contato.service';
 
@@ -9,7 +9,6 @@ import { ContatoService } from './services/contato.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
   cs:ContatoService = new ContatoService()
   contatos:Contato[] = this.cs.getContatos()
   title = 'contatos';
@@ -24,9 +23,6 @@ export class AppComponent {
   }
 
   addContact(contact:Contato) {
-    this.contatos.push(contact)
     this.mostrandoCreateContato = false;
-    window.localStorage.setItem('contacts', JSON.stringify(this.contatos));
-
   }
 }

@@ -23,7 +23,6 @@ export class CreateContatoComponent implements OnInit {
   }
 
   escondendoModal() {
-    // (eventEmitter)="escondendoModal($event)"
     this.handleDisapearModal.emit()
   }
 
@@ -38,6 +37,9 @@ export class CreateContatoComponent implements OnInit {
   }
   handleAddContato(contact: Contato) {
     if (!this.novoContato.nome) return
+
+    this.cs.addContato(contact)
+
     this.handleAdd.emit(contact)
 
   }

@@ -11,15 +11,15 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: #212121;
+  background-color: #2C5288;
   color: #ccc;
   height: 100%;
-  background-image: url(assets/img/bg.jpg);
+  /* background-image: url(assets/img/bg.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
-body::before {
+/* body::before {
   height: 100%;
   z-index: -1;
   content: "";
@@ -33,7 +33,7 @@ body::before {
   position: fixed;
   left: 0;
   top: 0;
-}
+} */
 
 form label {
   font-size: 0.8rem;
@@ -44,17 +44,17 @@ form label {
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  padding: 5px;
-  font-size: 1rem;
+  padding: 10px 5px;
+  font-size: 0.8remrem;
   border: 2px solid rgba(0, 0, 0, 0);
   background-color: rgba(256, 256, 256, 0.8);
+  border-radius: 2px;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus {
   outline: none;
-  border: 2px solid rgb(60, 0, 200);
   background-color: rgba(256, 256, 256, 1);
 }
 
@@ -62,33 +62,37 @@ button {
   border: none;
   cursor: pointer;
   padding: 10px 20px;
-  background-color: rgb(60, 0, 200);
-  color: #ccc;
+  background-color: #2C5288;
+  color: rgb(255, 255, 255);
   font-size: 0.9rem;
+  border-radius: 4px;
+  transition-duration: 200ms;
 }
 
 button:hover {
-  background-color: rgb(80, 0, 250);
+  background-color: #203c63;
   color: #fff;
 }
 
 button.link {
   background-color: transparent;
-  color: rgb(80, 0, 250);
+  color: #2C5288;
   text-decoration: underline;
 }
 
 button.link:hover {
-  color: #ccc;
+  color: #203c63;
 }
 
 a {
   background-color: transparent;
-  color: rgb(80, 0, 250);
+  color: #2C5288;
   text-decoration: underline;
   display: inline-block;
+  transition-duration: 200ms;
+
 }
 
 a:hover {
-  color: #ccc;
+  color: #203c63;
 }
