@@ -10,7 +10,7 @@ import { ContatoService } from 'src/app/services/contato.service';
 export class CreateContatoComponent implements OnInit {
 
   @Output() onCancelarClick:EventEmitter<null> = new EventEmitter();
-  
+
   novoContato:Contato = {
     nome:"",
     email:"",
@@ -39,9 +39,8 @@ export class CreateContatoComponent implements OnInit {
 
   salvar(){
     this.cs.addContato(this.novoContato);
-    
-    // Se quiser fazer a tela sumir depois da de adicionar o contato
-    // this.onCancelarClick.emit();
+
+    this.onCancelarClick.emit();
 
     // Manter a tela e limpar os campos para a adição de um novo contato
     this.novoContato = {
