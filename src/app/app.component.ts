@@ -1,7 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
-import { Contato } from './models/Contato';
-import { ContatoService } from './services/contato.service';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,20 +6,14 @@ import { ContatoService } from './services/contato.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  cs:ContatoService = new ContatoService()
-  contatos:Contato[] = this.cs.getContatos()
   title = 'contatos';
-  mostrandoCreateContato = false;
+  mostrandoModal = false;
 
-  mostrandoModal(situation: boolean) {
-    this.mostrandoCreateContato = true
-  }
-  escondendoModal(sitatuion:boolean) {
-    this.mostrandoCreateContato = false;
-
+  mostrarModal(){
+    this.mostrandoModal = true;
   }
 
-  addContact(contact:Contato) {
-    this.mostrandoCreateContato = false;
+  esconderModal(){
+    this.mostrandoModal = false;
   }
 }
