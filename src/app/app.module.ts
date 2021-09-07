@@ -8,6 +8,7 @@ import { MenuComponent } from './views/menu/menu.component';
 import { ListaDeContatosComponent } from './views/lista-de-contatos/lista-de-contatos.component';
 import { ContatoComponent } from './views/contato/contato.component';
 import { CreateContatoComponent } from './views/create-contato/create-contato.component';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CreateContatoComponent } from './views/create-contato/create-contato.co
     MenuComponent,
     ListaDeContatosComponent,
     ContatoComponent,
-    CreateContatoComponent
+    CreateContatoComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
