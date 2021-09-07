@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Contato } from '../models/Contato';
 
 @Injectable({
@@ -7,7 +7,12 @@ import { Contato } from '../models/Contato';
 
 export class ContatoService {
   private contacts!: Contato[];
+  static onContactsChanged:EventEmitter<Contato[]> = new EventEmitter();
   constructor() {
+
+  }
+
+  getContatos(): Contato[] {
     const data = window.localStorage.getItem('contacts');
     if (!data) {
       window.localStorage.setItem('contacts', '[]');
@@ -17,17 +22,14 @@ export class ContatoService {
         return contact;
       });
     }
-  }
-
-  getContatos(): Contato[] {
     return this.contacts;
   }
 
   addContato(contato: Contato) {
-    console.log(contato);
-    console.log(this.contacts);
-
-    this.contacts.push(contato);
-    window.localStorage.setItem('contacts', JSON.stringify(this.contacts));
+    let contatos = this.getContatos()
+    contatos.push(contato);
+    window.localStorage.setItem('contacts', JSON.stringify(contatos));
+    this.contacts = contatos;
+    ContatoService.onContactsChanged.emit(contatos)
   }
 }

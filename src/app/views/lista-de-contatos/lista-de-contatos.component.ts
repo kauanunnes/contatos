@@ -9,8 +9,12 @@ import { ContatoService } from 'src/app/services/contato.service';
 })
 export class ListaDeContatosComponent implements OnInit {
   private cs:ContatoService = new ContatoService()
-  contatos:Contato[] = this.cs.getContatos()
+  contatos:Contato[] = [];
   constructor() {
+    this.contatos = this.cs.getContatos()
+    ContatoService.onContactsChanged.subscribe((data) => {
+      this.contatos = data;
+    })
   }
 
   ngOnInit(): void {}
