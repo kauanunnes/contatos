@@ -1,0 +1,85 @@
+#modal {
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 3s linear;
+}
+
+#modal form {
+  color: #ffffff;
+
+  border-radius: 4px;
+  background-color: #1e1e2e;
+  padding: 40px;
+  /* box-shadow: 0 0 2px inset #496996fd; */
+  width: 400px;
+}
+
+#modal form label {
+  font-weight: 600;
+}
+
+#modal form input{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 14px;
+  height: 40px;
+  outline: 0.5px rgb(130, 130, 130);
+  background-color: #171723;
+  color: #fff;
+
+}
+
+#modal form div {
+  display: flex;
+  align-items: center;
+
+}
+
+#modal form div input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#modal form div a {
+  cursor: pointer;
+}
+
+#modal form div a.remove{
+  color: #882c2c;
+}
+
+#modal form div a.remove:hover{
+  color: #8f1f1f;
+}
+
+#modal form .controles{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+#modal form button.addButton {
+  background: #2396d8;
+}
+
+#modal form #ddd {
+  width: 20%;
+  text-align: center;
+}
+
+i.material-icons {
+  color: #2396d8;
+}
