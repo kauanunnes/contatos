@@ -1,5 +1,5 @@
 section {
-  background-color: #1E1E2E;
+  background-color: #171723;
 
   padding: 20px;
 
@@ -13,6 +13,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 
 section > img:nth-child(1) {

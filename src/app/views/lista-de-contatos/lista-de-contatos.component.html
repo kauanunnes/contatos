@@ -1,4 +1,7 @@
 <h2>{{contatos.length}} contatos na sua lista</h2>
+<form action="" id="searchForm">
+  <input type="text" name="search" id="searchField" placeholder="Search">
+</form>
 <main>
   <app-contato *ngFor="let currentContato of contatos" [contato]="currentContato"></app-contato>
 </main>
