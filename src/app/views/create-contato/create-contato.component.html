@@ -12,7 +12,7 @@
           Telefone:
           <div *ngFor="let telefone of novoContato.tels; let i = index; trackBy: track">
               <input type="tel" name="ddd{{i}}" id="ddd" [(ngModel)]="novoContato.ddd[i]" placeholder="DDD" maxlength="2">
-              <input type="tel" name="tel{{i}}" [(ngModel)]="novoContato.tels[i]" placeholder="Seu número de telefone">
+              <input type="tel" name="tel{{i}}" [(ngModel)]="novoContato.tels[i]" placeholder="Seu número de telefone" maxlength="9">
               <a (click)="addTel()" *ngIf="i === 0"><i class="material-icons">add_circle</i></a>
               <a (click)="removeTel(i)" class="remove" *ngIf="i !== 0"><i class="material-icons">remove_circle</i></a>
           </div>

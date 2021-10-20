@@ -1,5 +1,5 @@
 <app-menu (eventEmitter)="mostrandoModal($event)"></app-menu>
-<router-outlet></router-outlet>
+<div class="container"><router-outlet></router-outlet></div>
 <app-create-contato
   *ngIf="mostrandoCreateContato"
   (handleDisapearModal)="escondendoModal($event)"

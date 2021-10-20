@@ -10,7 +10,6 @@ nav {
   z-index: 1;
   width: 100%;
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(256, 256, 256, 0.2);
 }
 
 nav > ul {
