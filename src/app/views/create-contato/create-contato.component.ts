@@ -15,6 +15,7 @@ export class CreateContatoComponent implements OnInit {
     nome: '',
     email: '',
     tels:[''],
+    ddd:['']
   };
 
   constructor() { }
@@ -37,6 +38,10 @@ export class CreateContatoComponent implements OnInit {
   }
   handleAddContato(contact: Contato) {
     if (!this.novoContato.nome) return
+
+    contact.tels.forEach((value, index) => {
+      contact.tels[index] = `${contact.ddd[index]}${contact.tels[index]}`
+    })
 
     this.cs.addContato(contact)
 

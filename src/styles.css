@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
 * {
   box-sizing: border-box;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
 }
 
 html {
@@ -14,26 +16,8 @@ body {
   background-color: #2C5288;
   color: #ccc;
   height: 100%;
-  /* background-image: url(assets/img/bg.jpg);
-  background-size: cover;
-  background-attachment: fixed; */
 }
 
-/* body::before {
-  height: 100%;
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.9);
-  pointer-events: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-} */
 
 form label {
   font-size: 0.8rem;
@@ -45,7 +29,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"] {
   padding: 10px 5px;
-  font-size: 0.8remrem;
+  font-size: 0.8rem;
   border: 2px solid rgba(0, 0, 0, 0);
   background-color: rgba(256, 256, 256, 0.8);
   border-radius: 2px;
@@ -76,7 +60,7 @@ button:hover {
 
 button.link {
   background-color: transparent;
-  color: #2C5288;
+  color: #2396d8;
   text-decoration: underline;
 }
 
